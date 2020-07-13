@@ -9,6 +9,8 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import Vuetify from "../plugins/vuetify"
+import '@mdi/font/css/materialdesignicons.css'
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -31,6 +33,9 @@ Vue.component('example-vuetify-component', require('./components/ExampleVuetifyC
  */
 
 const app = new Vue({
+    icons: {
+        iconfont: 'md',
+    },
     vuetify: Vuetify,
     el: '#app',
 });
